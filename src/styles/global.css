@@ -1,0 +1,1327 @@
+/* =================================
+   BASE
+================================= */
+
+:root {
+  --text: #171717;
+  --muted: #6f6f6f;
+  --line: #dedede;
+  --background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  max-width: 1100px;
+  width: calc(100% - 80px);
+
+  margin: 0 auto;
+  padding: 32px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.site-name {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.site-nav a {
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
+
+/* =================================
+   HOME — HERO
+================================= */
+
+.home-hero {
+  max-width: 1100px;
+  width: calc(100% - 80px);
+
+  margin: 0 auto;
+  padding: 55px 0 45px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-copy {
+  width: 100%;
+}
+
+.hero-kicker {
+  margin-bottom: 28px;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+.home-hero h1,
+.hero-title {
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+
+  font-size: clamp(48px, 5.8vw, 82px);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+}
+
+.hero-first-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero-second-line {
+  display: block;
+}
+
+.hero-second-line strong {
+  color: var(--text);
+}
+
+.hero-description {
+  max-width: 720px;
+
+  margin: 38px 0 0;
+
+  font-size: 20px;
+  line-height: 1.5;
+
+  color: var(--muted);
+}
+
+
+/* =================================
+   HOME — ABOUT
+================================= */
+
+.home-profile {
+  max-width: 1100px;
+  width: calc(100% - 80px);
+
+  margin: 0 auto;
+  padding: 45px 0 105px;
+}
+
+.home-profile > .section-label {
+  margin-bottom: 40px;
+}
+
+.profile-content {
+  display: grid;
+
+  grid-template-columns: 65fr 35fr;
+  column-gap: 60px;
+
+  width: 100%;
+  margin: 0;
+
+  align-items: start;
+}
+
+.profile-text {
+  width: 100%;
+  max-width: none;
+
+  padding-left: 40px;
+}
+
+.profile-name {
+  margin: 0 0 10px;
+
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+
+  color: var(--text);
+}
+
+.profile-credentials {
+  margin: 0 0 32px;
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.profile-credentials strong {
+  display: block;
+  font-weight: 700;
+}
+
+.profile-credentials strong + strong {
+  margin-top: 2px;
+}
+
+.profile-lead {
+  margin: 0 0 28px;
+
+  font-size: 25px;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+
+  color: var(--text);
+}
+
+.profile-text p:not(.profile-lead) {
+  margin: 0 0 25px;
+
+  font-size: 17px;
+  line-height: 1.6;
+
+  color: var(--muted);
+}
+
+.profile-photo-wrap {
+  width: 100%;
+}
+
+.profile-photo {
+  display: block;
+
+  width: 120%;
+  height: auto;
+
+  margin-left: auto;
+}
+
+
+/* =================================
+   HOME — DISSERTATION
+================================= */
+
+.home-dissertation {
+  max-width: 1100px;
+  width: calc(100% - 80px);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    180px
+    minmax(0, 720px);
+
+  gap: 75px;
+
+  padding: 105px 0 120px;
+
+  border-top: 1px solid var(--line);
+}
+
+.dissertation-content {
+  max-width: 760px;
+}
+
+.dissertation-content h2 {
+  margin: 0;
+
+  font-size: clamp(62px, 8vw, 105px);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  font-weight: 500;
+}
+
+.dissertation-subtitle {
+  max-width: 550px;
+
+  margin-top: 27px;
+
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+.dissertation-content p {
+  max-width: 650px;
+
+  margin: 30px 0;
+
+  font-size: 17px;
+  line-height: 1.6;
+
+  color: var(--muted);
+}
+
+.dissertation-content a {
+  display: inline-block;
+
+  margin-top: 5px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid currentColor;
+
+  padding-bottom: 4px;
+}
+
+
+/* =================================
+   HOME — BROADER RESEARCH
+================================= */
+
+.home-agenda {
+  max-width: 1100px;
+  width: calc(100% - 80px);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    180px
+    minmax(0, 720px);
+
+  gap: 75px;
+
+  padding: 85px 0 105px;
+
+  border-top: 1px solid var(--line);
+}
+
+.agenda-content {
+  max-width: 720px;
+}
+
+.agenda-content p {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.6;
+
+  color: var(--muted);
+}
+
+.agenda-content a {
+  display: inline-block;
+
+  margin-top: 30px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid currentColor;
+
+  padding-bottom: 4px;
+}
+
+
+/* =================================
+   HOME — CURRENT STATUS
+================================= */
+
+.home-status {
+  max-width: 1100px;
+  width: calc(100% - 80px);
+
+  margin: 0 auto;
+
+  padding: 75px 0 85px;
+
+  border-top: 1px solid var(--line);
+}
+
+.home-status p {
+  max-width: 750px;
+
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.home-status .status-market {
+  margin-top: 18px;
+
+  font-size: 14px;
+
+  color: var(--muted);
+}
+
+
+/* =================================
+   SECTION LABEL
+================================= */
+
+.section-label {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+
+  padding: 30px 0;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  width: calc(100% - 80px);
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.footer-copy,
+.footer-affiliation {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.footer-affiliation {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+
+/* =================================
+   CV PAGE
+================================= */
+
+.cv-page {
+  max-width: 1100px;
+  width: calc(100% - 80px);
+
+  margin: 0 auto;
+
+  padding: 55px 0 100px;
+}
+
+.cv-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding-bottom: 30px;
+  margin-bottom: 35px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.cv-title {
+  margin: 10px 0 0;
+
+  font-size: clamp(48px, 5.8vw, 82px);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+}
+
+.cv-download {
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid currentColor;
+
+  padding-bottom: 5px;
+}
+
+.cv-download:hover {
+  color: var(--muted);
+}
+
+
+/* =================================
+   CV DOCUMENT
+================================= */
+
+.cv-document {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  background: #fff;
+  border: none;
+
+  overflow: hidden;
+}
+
+.cv-document iframe {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  height: 1100px;
+
+  border: none;
+  overflow: hidden;
+}
+
+
+/* =================================
+   RESEARCH PAGE — HERO
+================================= */
+
+.research-page {
+  max-width: 1100px;
+  width: calc(100% - 80px);
+
+  margin: 0 auto;
+}
+
+.research-hero {
+  max-width: 1100px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  padding: 55px 0 40px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.research-hero-copy {
+  width: 100%;
+}
+
+.research-hero-kicker {
+  margin-bottom: 28px;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+.research-hero h1 {
+   max-width: 950px;
+   max-width: none;
+
+  margin: 0;
+
+  font-size: clamp(42px, 5.2vw, 74px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+}
+
+.research-hero-description {
+  max-width: 760px;
+
+  margin: 35px 0 0;
+
+  font-size: 20px;
+  line-height: 1.5;
+
+  color: var(--muted);
+}
+
+
+/* =================================
+   RESEARCH PAGE — PROGRAM
+================================= */
+
+.research-program {
+  max-width: 1100px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    180px
+    minmax(0, 1fr);
+
+  gap: 75px;
+
+  padding: 60px 0 60px;
+}
+
+.research-program-content {
+  max-width: 720px;
+}
+
+.research-program-intro {
+  max-width: 720px;
+
+  margin: 0 0 25px;
+
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+
+  color: var(--text);
+}
+
+
+/* =================================
+   RESEARCH PAGE — PILLARS
+================================= */
+
+.research-pillar {
+  display: grid;
+
+  grid-template-columns:
+    45px
+    minmax(0, 1fr);
+
+  column-gap: 20px;
+
+  padding: 16px 0;
+
+  border-top: 1px solid var(--line);
+}
+
+.research-pillar:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.research-pillar-number {
+  padding-top: 3px;
+
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  color: var(--muted);
+}
+
+.research-pillar-content h2 {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+
+  text-transform: uppercase;
+}
+
+.research-pillar-content p {
+  max-width: 620px;
+
+  margin: 7px 0 0;
+
+  font-size: 16px;
+  line-height: 1.45;
+
+  color: var(--muted);
+}
+
+.research-pillar-content strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+
+/* =================================
+   RESEARCH PAGE — AREAS
+================================= */
+
+.research-section {
+  max-width: 1100px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    180px
+    minmax(0, 1fr);
+
+  gap: 75px;
+
+  padding: 85px 0 105px;
+
+  border-top: 1px solid var(--line);
+}
+
+.research-section-label {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+.research-section-content {
+  min-width: 0;
+  max-width: none;
+}
+
+.research-area-intro {
+  max-width: 680px;
+
+  margin: 0 0 50px;
+}
+
+.research-area-intro p {
+  margin: 0;
+
+  font-size: 21px;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+
+  color: var(--text);
+}
+
+
+/* =================================
+   RESEARCH PAGE — PAPERS
+================================= */
+
+.research-paper {
+  margin: 0 0 55px;
+
+  padding: 0 0 55px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.research-paper:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  border-bottom: none;
+}
+
+.research-paper.featured h2 {
+  font-size: 36px;
+  line-height: 1.1;
+}
+
+.paper-status {
+  margin-bottom: 15px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+.research-paper h2 {
+  max-width: 760px;
+
+  margin: 0;
+
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+}
+
+.paper-authors {
+  margin: 14px 0 0;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: var(--muted);
+}
+
+.paper-description {
+  max-width: 680px;
+
+  margin: 22px 0 0;
+
+  font-size: 17px;
+  line-height: 1.6;
+
+  color: var(--muted);
+}
+
+.paper-description strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.paper-link {
+  display: inline-block;
+
+  margin-top: 24px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid currentColor;
+
+  padding-bottom: 4px;
+}
+
+.paper-link:hover {
+  color: var(--muted);
+}
+
+
+/* =================================
+   RESEARCH PAGE — CLOSING
+================================= */
+
+.research-closing {
+  max-width: 1100px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    180px
+    minmax(0, 720px);
+
+  gap: 75px;
+
+  padding: 85px 0 110px;
+
+  border-top: 1px solid var(--line);
+}
+
+.research-closing-content {
+  max-width: 720px;
+}
+
+.research-closing-content p {
+  margin: 0;
+
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 750px) {
+
+
+  /* ---------------------------------
+     HEADER
+  --------------------------------- */
+
+  .site-header {
+    width: calc(100% - 40px);
+
+    padding: 25px 0;
+
+    align-items: center;
+  }
+
+  .site-name {
+    font-size: 20px;
+  }
+
+  .site-nav {
+    gap: 18px;
+  }
+
+  .site-nav a {
+    font-size: 13px;
+  }
+
+
+  /* ---------------------------------
+     HOME — HERO
+  --------------------------------- */
+
+  .home-hero {
+    width: calc(100% - 40px);
+
+    padding: 55px 0 70px;
+  }
+
+  .hero-first-line {
+    white-space: normal;
+  }
+
+  .home-hero h1,
+  .hero-title {
+    font-size: clamp(44px, 12vw, 68px);
+    line-height: 0.98;
+  }
+
+  .hero-description {
+    margin-top: 28px;
+
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+
+  /* ---------------------------------
+     HOME — ABOUT
+  --------------------------------- */
+
+  .home-profile {
+    width: calc(100% - 40px);
+
+    padding: 60px 0 80px;
+  }
+
+  /*
+     Keep the photo beside the text
+     instead of pushing it below the bio.
+  */
+
+  .profile-content {
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      105px;
+
+    column-gap: 20px;
+
+    align-items: start;
+
+    width: 100%;
+  }
+
+  .profile-text {
+    order: 1;
+
+    min-width: 0;
+
+    padding-left: 0;
+  }
+
+  .profile-photo-wrap {
+    order: 2;
+
+    width: 105px;
+  }
+
+  .profile-photo {
+    display: block;
+
+    width: 105px;
+    max-width: 105px;
+
+    height: auto;
+
+    margin: 0;
+  }
+
+  .profile-name {
+    font-size: 21px;
+  }
+
+  .profile-credentials {
+    margin-bottom: 25px;
+
+    font-size: 13px;
+  }
+
+  .profile-lead {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  .profile-text p:not(.profile-lead) {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+
+  /* ---------------------------------
+     HOME — DISSERTATION
+  --------------------------------- */
+
+  .home-dissertation {
+    width: calc(100% - 40px);
+
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    padding: 70px 0 85px;
+  }
+
+  .dissertation-content h2 {
+    font-size: clamp(58px, 18vw, 75px);
+  }
+
+
+  /* ---------------------------------
+     HOME — BROADER RESEARCH
+  --------------------------------- */
+
+  .home-agenda {
+    width: calc(100% - 40px);
+
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    padding: 60px 0 75px;
+  }
+
+
+  /* ---------------------------------
+     HOME — STATUS
+  --------------------------------- */
+
+  .home-status {
+    width: calc(100% - 40px);
+
+    padding: 55px 0 65px;
+  }
+
+  .home-status p {
+    font-size: 20px;
+  }
+
+
+  /* ---------------------------------
+     FOOTER
+  --------------------------------- */
+
+  .footer-inner {
+    width: calc(100% - 40px);
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .footer-affiliation {
+    display: none;
+  }
+
+  .footer-links {
+    gap: 16px;
+  }
+
+
+  /* =================================
+     RESEARCH — GLOBAL MOBILE WIDTH
+  ================================= */
+
+  /*
+     The research Astro file does not
+     currently use .research-page as a
+     wrapper around the main content.
+
+     Give each major section its own
+     horizontal breathing room.
+  */
+
+  .research-hero,
+  .research-program,
+  .research-section,
+  .research-closing {
+    width: calc(100% - 48px);
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* =================================
+     RESEARCH — HERO
+  ================================= */
+
+  .research-hero {
+    padding: 50px 0 55px;
+  }
+
+  .research-hero h1 {
+    font-size: clamp(40px, 11vw, 62px);
+
+    line-height: 0.98;
+  }
+
+  .research-hero-description {
+    margin-top: 26px;
+
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+
+  /* =================================
+     RESEARCH — PROGRAM
+  ================================= */
+
+  .research-program {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    padding: 60px 0 70px;
+  }
+
+  .research-program-content {
+    max-width: 720px;
+    max-width: none;
+  }
+
+  .research-program-intro {
+    font-size: 18px;
+  }
+
+
+  /* =================================
+     RESEARCH — PILLARS
+  ================================= */
+
+  .research-pillar {
+    grid-template-columns:
+      35px
+      minmax(0, 1fr);
+
+    column-gap: 14px;
+
+    padding: 15px 0;
+  }
+
+  .research-pillar-number {
+    font-size: 15px;
+  }
+
+  .research-pillar-content h2 {
+    font-size: 20px;
+  }
+
+  .research-pillar-content p {
+    font-size: 15px;
+
+    line-height: 1.5;
+  }
+
+
+  /* =================================
+     RESEARCH — AREAS
+  ================================= */
+
+  .research-section {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    padding: 60px 0 75px;
+  }
+
+  .research-section-label {
+    font-size: 15px;
+  }
+
+  .research-area-intro {
+    margin-bottom: 35px;
+  }
+
+  .research-area-intro p {
+    font-size: 18px;
+
+    line-height: 1.45;
+  }
+
+
+  /* =================================
+     RESEARCH — PAPERS
+  ================================= */
+
+  .research-paper {
+    margin-bottom: 42px;
+
+    padding-bottom: 42px;
+  }
+
+  .research-paper h2 {
+    font-size: 25px;
+
+    line-height: 1.18;
+  }
+
+  .research-paper.featured h2 {
+    font-size: 29px;
+  }
+
+  .paper-status {
+    font-size: 11px;
+  }
+
+  .paper-authors {
+    font-size: 13px;
+  }
+
+  .paper-description {
+    font-size: 16px;
+
+    line-height: 1.58;
+  }
+
+
+  /* =================================
+     RESEARCH — CLOSING
+  ================================= */
+
+  .research-closing {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    padding: 60px 0 75px;
+  }
+
+  .research-closing-content p {
+    font-size: 18px;
+
+    line-height: 1.5;
+  }
+
+
+  /* =================================
+     CV
+  ================================= */
+
+  .cv-page {
+    width: calc(100% - 40px);
+
+    padding: 45px 0 70px;
+  }
+
+  .cv-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding-bottom: 25px;
+
+    margin-bottom: 25px;
+  }
+
+  .cv-title {
+    font-size: clamp(44px, 12vw, 64px);
+  }
+
+  /*
+     Keep the PDF within the viewport.
+     The browser's native PDF viewer can
+     handle the document itself.
+  */
+
+  .cv-document {
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cv-document iframe {
+    width: 100%;
+    min-width: 0;
+
+    height: 850px;
+  }
+
+}
